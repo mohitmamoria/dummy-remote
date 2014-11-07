@@ -33,7 +33,8 @@
 	});
 
 	
-	$('body').click(function(e) {
+	$(document).click(function(e) {
+		console.log('hello');
 		socket.emit('order', {target: 'mobile', doer: 'changeBackground'});
 	});
 	</script>

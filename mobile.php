@@ -34,7 +34,7 @@
 	});
 
 	
-	$('body').click(function(e) {
+	$(document).click(function(e) {
 		socket.emit('order', {target: 'computer', doer: 'changeBackground'});
 	});
 	</script>
