@@ -4,10 +4,25 @@
 	<title>Remote</title>
 </head>
 <body>
-	<script src="http://146.185.143.179:8080/socket.io/socket.io.js"></script>
+	<?php
+		function getRandomString($length = 3)
+		{
+		    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+		    $randomString = '';
+		    for ($i = 0; $i < $length; $i++) {
+		        $randomString .= $characters[rand(0, strlen($characters) - 1)];
+		    }
+		    return $randomString;
+		}
+
+		$salt = getRandomString();
+
+		echo '<h1>' . $salt . '</h1>';
+	?>
+	<script src="http://localhost:8080/socket.io/socket.io.js"></script>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script>
-	var socket = io('http://146.185.143.179:8080', {query: 'target=computer'});
+	var socket = io('http://localhost:8080', {query: 'target=computer&salt=<?php echo $salt; ?>'});
 	
 	function getRandomColor() {
 		var letters = '0123456789ABCDEF'.split('');
@@ -34,8 +49,7 @@
 
 	
 	$(document).click(function(e) {
-		console.log('hello');
-		socket.emit('order', {target: 'mobile', doer: 'changeBackground'});
+		socket.emit('order', {target: 'mobile', salt: '<?php echo $salt; ?>', doer: 'changeBackground'});
 	});
 	</script>
 </body>
