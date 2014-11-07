@@ -4,8 +4,6 @@
 	<title>Remote</title>
 </head>
 <body>
-	<button>Blink!</button>
-
 	<script src="http://146.185.143.179:8080/socket.io/socket.io.js"></script>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script>
@@ -36,7 +34,7 @@
 	});
 
 	
-	$('button').click(function(e) {
+	$('body').click(function(e) {
 		socket.emit('order', {target: 'computer', doer: 'changeBackground'});
 	});
 	</script>
