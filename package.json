@@ -1,0 +1,17 @@
+{
+	"name": "practice-remote",
+	"version": "0.0.1",
+	"description": "Turning mobile into a remote.",
+	"keywords": [],
+	"homepage": "http://horntell.com",
+	"author": {
+		"name": "Mohit Mamoria",
+		"email": "mohit@owlgrin.com",
+		"url": "http://mohitmamoria.com"
+	},
+	"main": "remote",
+	"dependencies": {
+		"socket.io": "1.0.*",
+		"redis": "0.10.3"
+	}
+}
