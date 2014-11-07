@@ -6,10 +6,10 @@
 <body>
 	<button>Blink!</button>
 
-	<script src="http://localhost:8080/socket.io/socket.io.js"></script>
+	<script src="http://146.185.143.179:8080/socket.io/socket.io.js"></script>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script>
-	var socket = io('http://localhost:8080', {query: 'target=mobile'});
+	var socket = io('http://146.185.143.179:8080', {query: 'target=mobile'});
 	
 	function getRandomColor() {
 		var letters = '0123456789ABCDEF'.split('');
