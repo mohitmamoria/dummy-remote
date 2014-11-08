@@ -3,10 +3,9 @@
 	"version": "0.0.1",
 	"description": "Turning mobile into a remote.",
 	"keywords": [],
-	"homepage": "http://horntell.com",
 	"author": {
 		"name": "Mohit Mamoria",
-		"email": "mohit@owlgrin.com",
+		"email": "mohit.mamoria@gmail.com",
 		"url": "http://mohitmamoria.com"
 	},
 	"main": "remote",
